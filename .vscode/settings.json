@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "Clase02/src",
         "Clase01/src",
-        "Clase02/src"
+        "Reto_1/Reto 1/src"
     ]
 }
