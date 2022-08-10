@@ -3,7 +3,6 @@ package model.vo;
 public class primerInformeVo {
     private int idLider;
 
-
     private String nombre;
     private String primerApellido;
     private String ciudadResidencia;
@@ -51,9 +50,10 @@ public class primerInformeVo {
 
     }
 
-/*     public primerInformeVo(int idLider) {
-        this.idLider = idLider;
-    } */
+    /*
+     * public primerInformeVo(int idLider) {
+     * this.idLider = idLider;
+     * }
+     */
 
-    
 }

@@ -35,7 +35,3 @@ public class controladorReportes {
         return this.tercerinforme.consultarTercerInforme();
     }
 }
-
-
-    
-

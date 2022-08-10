@@ -10,10 +10,9 @@ import java.util.ArrayList;
 
 import UtilReto5.JDBCUtilities;
 
-        /*Realizar un informe basándose en las compras realizadas por los proyectos con el proveedor
-        “Homecenter” y para la ciudad “Salento”. Este informe debe incluir: ID_Compra,
-         Constructora y Banco_Vinculado*/
-
+/*Realizar un informe basándose en las compras realizadas por los proyectos con el proveedor
+“Homecenter” y para la ciudad “Salento”. Este informe debe incluir: ID_Compra,
+ Constructora y Banco_Vinculado*/
 
 public class tercerInformeDao {
 
@@ -22,24 +21,15 @@ public class tercerInformeDao {
         ArrayList<tercerInformeVo> resultado = new ArrayList<tercerInformeVo>();
         Connection conexion = JDBCUtilities.getConnection();
         try {
-/*             String query = "select distinct Lider.ID_Lider, Nombre, Primer_Apellido, Segundo_Apellido " +
-                    "from Lider inner join Proyecto " +
-                    "on (Lider.ID_Lider = Proyecto.ID_Lider); "; */
 
-                    String query = "SELECT Compra.ID_Compra, Proyecto.Constructora, Proyecto.Banco_Vinculado FROM Compra"
+            String query = "SELECT Compra.ID_Compra, Proyecto.Constructora, Proyecto.Banco_Vinculado FROM Compra"
                     + " INNER JOIN Proyecto ON Compra.ID_Proyecto = Proyecto.ID_Proyecto"
                     + " WHERE Compra.Proveedor = 'Homecenter' AND Proyecto.Ciudad = 'Salento'";
-
 
             PreparedStatement statement = conexion.prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 tercerInformeVo requerimiento = new tercerInformeVo();
-/*                 requerimiento.setId_Lider(resultSet.getInt("ID_Lider"));
-                requerimiento.setNombre(resultSet.getString("Nombre"));
-                requerimiento.setPrimer_Apellido(resultSet.getString("Primer_Apellido"));
-                requerimiento.setSegundo_Apellido(resultSet.getString("Segundo_Apellido")); */
-
                 requerimiento.setIdCompra(resultSet.getInt("ID_Compra"));
                 requerimiento.setConstructora(resultSet.getString("Constructora"));
                 requerimiento.setBancoVinculado(resultSet.getString("Banco_Vinculado"));
