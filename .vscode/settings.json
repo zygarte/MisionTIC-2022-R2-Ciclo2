@@ -6,8 +6,9 @@
         "Clase02/src",
         "Clase01/src",
         "Ciclo 2 Reto 4/src",
+        "Ciclo 2 Reto 4",
         "Ciclo 2 Reto 2/src",
-        "Ciclo 2 Reto 4"
+        "Ciclo 2 Reto 5/src"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
